@@ -39,7 +39,22 @@ useSeoMeta({
       <NuxtPage />
     </NuxtLayout>
 
-    <UNotifications />
     <UModals />
   </div>
+
+  <!-- <UDashboardPanel grow>
+    <UDashboardNavbar title="Topup">
+      <UCard class="h-screen ">
+        <div class="text-center mx-auto w-full ">
+          <p class="font-semibold"> Use mana scan to login</p>
+          <UAvatar class="mx-auto mb-2 "
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEpxWQV3aLEcH8H6IKhAr3_WvERMBKHNFpZw&s" size="4xl">
+          </UAvatar>
+        </div>
+        <UButton block :ui="{ rounded: 'rounded-full' }" @click="$router.push('/A2')">สร้าง QR เติมเงิน</UButton>
+        <NuxtLink to="/A4">Go to A4</NuxtLink>
+      </UCard>
+    </UDashboardNavbar> 
+   </UDashboardPanel>-->
+
 </template>

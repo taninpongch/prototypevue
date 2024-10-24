@@ -24,7 +24,6 @@ const dropdownItems = [[{
 
 const { data: mails } = await useFetch<Mail[]>('/api/mails', { default: () => [] })
 
-// Filter mails based on the selected tab
 const filteredMails = computed(() => {
   if (selectedTab.value === 1) {
     return mails.value.filter(mail => !!mail.unread)
@@ -46,7 +45,6 @@ const isMailPanelOpen = computed({
   }
 })
 
-// Reset selected mail if it's not in the filtered mails
 watch(filteredMails, () => {
   if (!filteredMails.value.find(mail => mail.id === selectedMail.value?.id)) {
     selectedMail.value = null
@@ -74,7 +72,6 @@ watch(filteredMails, () => {
         </template>
       </UDashboardNavbar>
 
-      <!-- ~/components/inbox/InboxList.vue -->
       <InboxList
         v-model="selectedMail"
         :mails="filteredMails"
@@ -173,7 +170,6 @@ watch(filteredMails, () => {
           </template>
         </UDashboardNavbar>
 
-        <!-- ~/components/inbox/InboxMail.vue -->
         <InboxMail :mail="selectedMail" />
       </template>
       <div

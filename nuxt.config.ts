@@ -1,14 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
-
+  app: {
+    layout: false,
+  },
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/ui',
     '@vueuse/nuxt'
   ],
-
   ui: {
     safelistColors: ['primary', 'red', 'orange', 'green']
   },
@@ -43,5 +44,5 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2024-07-11'
+  compatibilityDate: '2024-07-11',
 })

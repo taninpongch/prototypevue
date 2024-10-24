@@ -19,6 +19,24 @@ const period = ref<Period>('daily')
 </script>
 
 <template>
+  <UDashboardPanel grow>
+    <UDashboardNavbar title="Topup">
+    </UDashboardNavbar>
+
+    <UCard class="h-screen ">
+      <div class="text-center mx-auto w-full ">
+        <p class="font-semibold"> Use mana scan to login</p>
+        <UAvatar class="mx-auto mb-2 "
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEpxWQV3aLEcH8H6IKhAr3_WvERMBKHNFpZw&s" size="4xl">
+        </UAvatar>
+      </div>
+      <UButton block :ui="{ rounded: 'rounded-full' }" to="/A2">สร้าง QR เติมเงิน</UButton>
+    </UCard>
+  </UDashboardPanel>
+</template>
+
+<!-- 
+<template>
   <UDashboardPage>
     <UDashboardPanel grow>
       <UDashboardNavbar title="Home">
@@ -57,13 +75,11 @@ const period = ref<Period>('daily')
 
       <UDashboardToolbar>
         <template #left>
-          <!-- ~/components/home/HomeDateRangePicker.vue -->
           <HomeDateRangePicker
             v-model="range"
             class="-ml-2.5"
           />
 
-          <!-- ~/components/home/HomePeriodSelect.vue -->
           <HomePeriodSelect
             v-model="period"
             :range="range"
@@ -72,19 +88,16 @@ const period = ref<Period>('daily')
       </UDashboardToolbar>
 
       <UDashboardPanelContent>
-        <!-- ~/components/home/HomeChart.vue -->
         <HomeChart
           :period="period"
           :range="range"
         />
 
         <div class="grid lg:grid-cols-2 lg:items-start gap-8 mt-8">
-          <!-- ~/components/home/HomeSales.vue -->
           <HomeSales />
-          <!-- ~/components/home/HomeCountries.vue -->
           <HomeCountries />
         </div>
       </UDashboardPanelContent>
     </UDashboardPanel>
   </UDashboardPage>
-</template>
+</template> -->

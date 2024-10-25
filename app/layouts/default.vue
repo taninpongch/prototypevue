@@ -4,68 +4,38 @@ const appConfig = useAppConfig()
 const { isHelpSlideoverOpen } = useDashboard()
 
 const links = [{
-  id: 'home',
-  label: 'Home',
-  icon: 'i-heroicons-home',
-  to: '/A2',
+  id: 'Projects',
+  label: 'Projects',
+  icon: 'material-symbols-light:contract-edit-outline-rounded',
+  to: '/projects/main',
   tooltip: {
     text: 'Home',
     shortcuts: ['G', 'H']
   }
 }, {
-  id: 'Topup',
-  label: 'Topup',
-  icon: 'i-heroicons-inbox',
-  to: '/A3',
+  id: 'Teams',
+  label: 'Teams',
+  icon: 'ion-people-outline',
+  to: '/teams/main',
   tooltip: {
     text: 'Inbox',
     shortcuts: ['G', 'I']
   }
 }, {
-  id: 'ดูบัญชี',
-  label: 'ดูบัญชี',
-  icon: 'i-heroicons-user-group',
-  to: '/A8',
-  tooltip: {
-    text: 'Users',
-    shortcuts: ['G', 'U']
-  }
-}, {
-  id: 'ดูบัญชี',
-  label: 'User',
-  icon: 'i-heroicons-user-group',
-  to: '/users',
+  id: 'People',
+  label: 'People',
+  icon: 'ion-person-outline',
+  to: '/peoples/main',
   tooltip: {
     text: 'Users',
     shortcuts: ['G', 'U']
   }
 }
-  // , {
-  //   id: 'settings',
-  //   label: 'Settings',
-  //   to: '/settings',
-  //   icon: 'i-heroicons-cog-8-tooth',
-  //   children: [{
-  //     label: 'General',
-  //     to: '/settings',
-  //     exact: true
-  //   }, {
-  //     label: 'Members',
-  //     to: '/settings/members'
-  //   }, {
-  //     label: 'Notifications',
-  //     to: '/settings/notifications'
-  //   }],
-  //   tooltip: {
-  //     text: 'Settings',
-  //     shortcuts: ['G', 'S']
-  //   }
-  // }
 ]
 
 const footerLinks = [{
-  label: 'Logout',
-  icon: 'i-heroicons-plus',
+  label: 'Sign out',
+  icon: 'ion-log-out-outline',
 }]
 
 // const groups = [{

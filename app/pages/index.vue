@@ -20,7 +20,7 @@ const period = ref<Period>('daily')
 
 <template>
   <UDashboardPanel grow>
-    <UDashboardNavbar title="Topup">
+    <UDashboardNavbar title="Dashboard">
     </UDashboardNavbar>
 
     <UCard class="h-screen ">

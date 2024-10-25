@@ -3,8 +3,12 @@
     <UDashboardNavbar title="Home">
 
     </UDashboardNavbar>
-    <p class="font-semibold"> ยินดีต้อนรับสู่ CA</p>
-    <UAvatar src="https://www.cdc.gov/importation/media/images/2024/07/GettyImages-1445770180.jpg" size="4xl" />
+    <UDashboardPanelContent>
+
+      <label class="font-semibold text-4xl"> ยินดีต้อนรับสู่ CA</label>
+      <UAvatar src="https://fv5-2.files.fm/thumb.php?i=37hxqdee37&v=1&n=BA-web-test-banner.png"
+        :ui="{ rounded: 'rounded-none', size: { '3xl': 'w-full  h-full' } }" size="3xl" />
+    </UDashboardPanelContent>
   </UDashboardPanel>
 </template>
 

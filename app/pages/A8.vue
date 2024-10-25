@@ -14,21 +14,25 @@ const formatter = new Intl.DateTimeFormat('en-US', { day: '2-digit', month: '2-d
 const formattedTime = formatter.format(date);
 const people = [{
   Date: formattedTime,
+  Reftransaction: 'TX00000001',
   transaction: 'เติม',
   amount: Math.ceil(Math.random() * 100000),
   status: 'Success'
 }, {
   Date: formattedTime,
+  Reftransaction: 'TX00000002',
   transaction: 'เติม',
   amount: Math.ceil(Math.random() * 100000),
   status: 'Fail'
 }, {
   Date: formattedTime,
+  Reftransaction: 'TX00000003',
   transaction: 'ถอน',
   amount: Math.ceil(Math.random() * 100000),
   status: 'Fail'
 }, {
   Date: formattedTime,
+  Reftransaction: 'TX00000004',
   transaction: 'ถอน',
   amount: Math.ceil(Math.random() * 100000),
   status: 'Done'

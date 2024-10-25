@@ -15,7 +15,7 @@ const links = [{
 }, {
   id: 'Topup',
   label: 'Topup',
-  icon: 'i-heroicons-inbox',
+  icon: 'i-heroicons-arrow-down-tray-20-solid',
   to: '/A3',
   tooltip: {
     text: 'Inbox',
@@ -24,7 +24,7 @@ const links = [{
 }, {
   id: 'ดูบัญชี',
   label: 'ดูบัญชี',
-  icon: 'i-heroicons-user-group',
+  icon: 'i-heroicons-clipboard-document-list',
   to: '/A8',
   tooltip: {
     text: 'Users',
@@ -65,7 +65,7 @@ const links = [{
 
 const footerLinks = [{
   label: 'Logout',
-  icon: 'i-heroicons-plus',
+  icon: 'i-heroicons-arrow-left-start-on-rectangle-20-solid',
 }]
 
 // const groups = [{
@@ -99,9 +99,7 @@ const footerLinks = [{
       <UDashboardSidebar>
         <template #header>
           <div class="text-center mx-auto w-full ">
-            <UAvatar class="mx-auto mb-2"
-              src="https://static.vecteezy.com/system/resources/thumbnails/002/387/693/small_2x/user-profile-icon-free-vector.jpg"
-              size="3xl"></UAvatar>
+            <UAvatar class="mx-auto mb-2" icon="i-heroicons-building-storefront-20-solid" size="3xl"></UAvatar>
             <p class="font-semibold"> John Doe</p>
             <p> #xx15xx</p>
           </div>

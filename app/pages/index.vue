@@ -21,7 +21,7 @@ const period = ref<Period>('daily')
 <template>
   <UDashboardPage>
     <UDashboardPanel grow>
-      <UDashboardNavbar title="Home YOO!!">
+      <UDashboardNavbar title="Home YOO!!55555555Tatae999">
         <template #right>
           <UTooltip
             text="Notifications"

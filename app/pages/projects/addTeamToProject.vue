@@ -1,20 +1,52 @@
 <template>
   <UDashboardPanel grow>
-    <UDashboardNavbar title="The-S">
+    <UDashboardNavbar title="Delivery">
     </UDashboardNavbar>
+
+    <UHorizontalNavigation :links="links"
+          class="border-b border-gray-200 dark:border-gray-800" />
 
     <!-- <TODO: content> -->
     <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"
       :ui="{ base: '', padding: 'p-4 sm:p-4 lg:p-4', constrained: '' }">
-      <p class="py-4 ">All</p>
+      <p class="py-4 ">Manage Access</p>
+
+      
       <UCard :ui="{ body: { base: 'space-y-4', padding: 'px-4 py-4 sm:p-4' } }">
-        <div class="flex items-center justify-center">
+        <div class="flex flex-wrap items-center gap-4 pt-4" v-bind:class="{ 'justify-end': 'justify-between' }">
+          <div class="flex flex-wrap items-center gap-4">
+            <p @click="navigateCreateTeam()" class="text-blue-600">create team</p>
+            <!-- <UButton label="Add people" color="green" @click="navigate()" /> -->
+            <UButton label="Add team" color="green" @click="isOpen = true" />
+            <UModal v-model="isOpen">
+            <UCard :ui="{ ring: '', divide: 'divide-y divide  -gray-100 dark:divide-gray-800' }">
+              <template #header>
+                <p class="py-2">Add teams to Project (Delivery)</p>
+                <UAlert title="The-S-Dev" icon="i-ion-ios-people" variant="solid"
+                  :closeButton="{ icon: 'i-heroicons-x-mark-20-solid', variant: 'soft', color: 'white' }" />
+                <UAlert title="The-S-Gp" icon="i-ion-ios-people" variant="solid"
+                  :closeButton="{ icon: 'i-heroicons-x-mark-20-solid', variant: 'soft', color: 'white' }" />
+              </template>
+          
+              <template #footer>
+                <div class="flex flex-wrap items-center gap-4 pt-4" v-bind:class="{ 'justify-end': 'justify-between' }">
+                  <div class="flex flex-wrap items-center gap-4">
+                    <UButton label="Cancel" color="red" />
+                    <UButton label="Add to Project" color="green" />
+                  </div>
+                </div>
+              </template>
+            </UCard>
+          </UModal>
+          </div>
+        </div>
+
+          <UFormGroup label="Add teams to Project (Delivery)">
+          </UFormGroup>
           <UButtonGroup size="sm" orientation="horizontal">
             <UInput />
             <UButton icon="i-ion-md-search" color="gray" />
           </UButtonGroup>
-          <UAlert variant="soft" :closeButton="{ label: 'New team', variant: 'solid', to: 'createteam' }" />
-        </div>
 
         <li class="flex items-center justify-between gap-3 py-3 px-4 sm:px-6">
           <div class="flex items-center gap-3 min-w-0">
@@ -22,23 +54,10 @@
               <UCheckbox />
             </div>
             <div class="text-sm min-w-0">
-              <p class="text-gray-900 dark:text-white font-medium truncate">Select all</p>
+              <p class="text-gray-900 dark:text-white font-medium truncate">Select all teams</p>
             </div>
           </div>
-          <div class="flex items-center gap-3">
-            <div class="relative">
-              <div id="headlessui-listbox-button-v-0-22-0" aria-haspopup="listbox" aria-expanded="false"
-                data-headlessui-state="" role="button" class="flex items-center w-full"><button
-                  class="relative w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none border-0 inline-flex items-center text-left cursor-default capitalize rounded-md text-sm gap-x-1.5 px-2.5 py-1.5 shadow-sm bg-white dark:bg-gray-900 text-gray-900 dark:text-white ring-1 ring-inset ring-gray-300 dark:ring-gray-700 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 pe-9"
-                  type="button">
-                  <span class="block truncate">member</span>
-                  <span class="absolute inset-y-0 end-0 flex items-center pointer-events-none px-2.5">
-                    <UIcon name="i-ion:chevron-down-sharp" />
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
+    
         </li>
         <UDivider />
         <ul class="divide-y divide-gray-200 dark:divide-gray-800">
@@ -106,9 +125,26 @@
 </template>
 
 <script setup lang="ts">
+const isOpen = ref(false)
 
 const navigate = () => {
   navigateTo('detail')
 }
+
+const navigateCreateTeam = () => {
+  navigateTo('../teams/createteam')
+}
+
+const links = [
+  [{
+    label: 'Overview',
+    icon: 'i-ion-md-home',
+    to: '/projects/detail'
+  }, {
+    label: 'Member',
+    icon: 'i-ion-people-sharp',
+    to: '/projects/addTeamToProject'
+  }]
+]
 
 </script>

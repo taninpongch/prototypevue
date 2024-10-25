@@ -23,15 +23,13 @@ const period = ref<Period>('daily')
     <UDashboardNavbar title="Dashboard">
     </UDashboardNavbar>
 
-    <UCard class="h-screen ">
-      <div class="text-center mx-auto w-full ">
-        <p class="font-semibold"> Use mana scan to login</p>
-        <UAvatar class="mx-auto mb-2 "
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEpxWQV3aLEcH8H6IKhAr3_WvERMBKHNFpZw&s" size="4xl">
-        </UAvatar>
-      </div>
-      <UButton block :ui="{ rounded: 'rounded-full' }" to="/A2">สร้าง QR เติมเงิน</UButton>
-    </UCard>
+    <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"
+      :ui="{ base: '', padding: 'p-4 sm:p-4 lg:p-4', constrained: '' }">
+      <UCard :ui="{ body: { base: 'space-y-4', padding: 'px-4 py-4 sm:p-4' } }">
+        <p class="text-5xl">web นี้คืออะไร + tutorial เดี่ยวกับมาทำ</p>
+      </UCard>
+    </UContainer>
+
   </UDashboardPanel>
 </template>
 

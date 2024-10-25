@@ -15,7 +15,7 @@ const links = [{
 }, {
   id: 'Teams',
   label: 'Teams',
-  icon: 'ion-people-outline',
+  icon: 'i-ion-ios-people-outline',
   to: '/teams/main',
   tooltip: {
     text: 'Inbox',
@@ -72,8 +72,8 @@ const footerLinks = [{
             <UAvatar class="mx-auto mb-2"
               src="https://static.vecteezy.com/system/resources/thumbnails/002/387/693/small_2x/user-profile-icon-free-vector.jpg"
               size="3xl"></UAvatar>
-            <p class="font-semibold"> John Doe</p>
-            <p> #xx15xx</p>
+            <p class="font-semibold">Aurora</p>
+            <p> #1411577</p>
           </div>
           <!-- <UDashboardSearchButton /> -->
         </template>

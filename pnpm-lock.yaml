@@ -37,6 +37,9 @@ dependencies:
     version: 3.1.2(@popperjs/core@2.11.8)(vue@3.5.12)
 
 devDependencies:
+  '@iconify-json/ion':
+    specifier: ^1.2.1
+    version: 1.2.1
   '@nuxt/eslint':
     specifier: ^0.6.0
     version: 0.6.0(eslint@9.13.0)(typescript@5.6.3)(vite@5.4.10)
@@ -1458,6 +1461,12 @@ packages:
       '@iconify/types': 2.0.0
     dev: false
 
+  /@iconify-json/ion@1.2.1:
+    resolution: {integrity: sha512-33jiBdtP8+uBV0KRz8Z9g54QFujzssiT9W6wdNuY61VQM1s3cvoAX89yiczRs4/6b2xJE5vqqvsEJAQPqfY5JA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify-json/simple-icons@1.2.9:
     resolution: {integrity: sha512-0hxlf0uCKAUT+rLjh4iH16XMfRqptOpZURBVk2PKAFDGbe1+8hPPstKFkBAPvtfkCK0bO+E9QE/Q5ozuCYz28A==}
     dependencies:
@@ -1478,7 +1487,6 @@ packages:
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: false
 
   /@iconify/utils@2.1.33:
     resolution: {integrity: sha512-jP9h6v/g0BIZx0p7XGJJVtkVnydtbgTgt9mVNcGDYwaa7UhdHdI9dvoq+gKj9sijMSJKxUPEG2JyjsgXjxL7Kw==}

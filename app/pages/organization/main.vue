@@ -39,9 +39,11 @@
             </div>
           </li>
 
-          <li class="flex items-center bg-gray-100  justify-between gap-3 py-3 px-4 sm:px-6">
-            <div class="flex items-center gap-3 min-w-0">
-              <!-- <UCheckbox disabled /> -->
+          <li class="flex items-center justify-between gap-3 py-3 px-4 sm:px-6">
+            <div @click="navigate()" class="flex items-center gap-3 min-w-0">
+              <!-- <div class="">
+                <UCheckbox />
+              </div> -->
               <span
                 class="relative inline-flex items-center justify-center flex-shrink-0 rounded-full h-10 w-10 text-base">
                 <img class="rounded-full h-10 w-10 text-base"
@@ -49,6 +51,11 @@
               </span>
               <div class="text-sm min-w-0">
                 <p class="text-gray-900 dark:text-white font-medium truncate">Lugent</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="relative" @click="isOpenLeave = true">
+                <UButton color="red" label="Leave" />
               </div>
             </div>
           </li>

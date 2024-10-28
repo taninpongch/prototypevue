@@ -73,7 +73,7 @@ const footerLinks = [{
               src="https://static.vecteezy.com/system/resources/thumbnails/002/387/693/small_2x/user-profile-icon-free-vector.jpg"
               size="3xl"></UAvatar>
               <UserDropdown2 />
-            <!-- <p class="font-semibold">Aurora</p>
+            <!-- <p class="font-semibold">Buttree</p>
             <p> #1411577</p> -->
           </div>
           <!-- <UDashboardSearchButton /> -->

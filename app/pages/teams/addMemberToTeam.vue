@@ -23,7 +23,7 @@
                 <UCheckbox />
               </div>
               <div class="text-sm min-w-0">
-                <p class="text-gray-900 dark:text-white font-medium truncate">Aurora</p>
+                <p class="text-gray-900 dark:text-white font-medium truncate">Buttree</p>
               </div>
             </div>
           </li>
@@ -33,7 +33,7 @@
                 <UCheckbox />
               </div>
               <div class="text-sm min-w-0">
-                <p class="text-gray-900 dark:text-white font-medium truncate">Tatae999</p>
+                <p class="text-gray-900 dark:text-white font-medium truncate">Tachapong</p>
               </div>
             </div>
           </li>
@@ -69,9 +69,9 @@
             <UCard :ui="{ ring: '', divide: 'divide-y divide  -gray-100 dark:divide-gray-800' }">
               <template #header>
                 <p class="py-2">Add a member to team</p>
-                <UAlert title="Aurora" icon="i-ion-ios-person-outline" variant="solid"
+                <UAlert title="Buttree" icon="i-ion-ios-person-outline" variant="solid"
                   :closeButton="{ icon: 'i-heroicons-x-mark-20-solid', variant: 'soft', color: 'white' }" />
-                <UAlert title="Tatae999" icon="i-ion-ios-person-outline" variant="solid"
+                <UAlert title="Tachapong" icon="i-ion-ios-person-outline" variant="solid"
                   :closeButton="{ icon: 'i-heroicons-x-mark-20-solid', variant: 'soft', color: 'white' }" />
               </template>
 
@@ -79,7 +79,7 @@
                 <div class="flex flex-wrap items-center gap-4 pt-4" v-bind:class="{ 'justify-end': 'justify-between' }">
                   <div class="flex flex-wrap items-center gap-4">
                     <UButton label="Cancel" color="red" />
-                    <UButton label="Confirm" color="green" />
+                    <UButton label="Confirm" color="green" @click="navigation()" />
                   </div>
                 </div>
               </template>
@@ -96,4 +96,7 @@
 const isOpen = ref(false)
 const selected = ref('sms')
 
+const navigation = () =>{
+navigateTo('/teams/main')
+};
 </script>

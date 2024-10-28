@@ -44,7 +44,7 @@
                   src="https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/antfu">
               </span>
               <div class="text-sm min-w-0">
-                <p class="text-gray-900 dark:text-white font-medium truncate">aurora</p>
+                <p class="text-gray-900 dark:text-white font-medium truncate">Buttree</p>
               </div>
             </div>
             <div class="flex items-center gap-3">
@@ -77,7 +77,7 @@
                   src="https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/antfu">
               </span>
               <div class="text-sm min-w-0">
-                <p class="text-gray-900 dark:text-white font-medium truncate">tatae999</p>
+                <p class="text-gray-900 dark:text-white font-medium truncate">Tachapong</p>
               </div>
             </div>
             <div class="flex items-center gap-3">
@@ -140,7 +140,7 @@
               <p class="py-2 text-center">Removing 1 member</p>
             </template>
             <p>The following members will be removed:</p>
-            <UAlert title="Aurora" icon="i-ion-ios-person-outline" variant="solid" />
+            <UAlert title="Buttree" icon="i-ion-ios-person-outline" variant="solid" />
             <template #footer>
               <div class="flex flex-wrap items-center gap-4 pt-4" v-bind:class="{ 'justify-end': 'justify-between' }">
                 <div class="flex flex-wrap items-center gap-4">

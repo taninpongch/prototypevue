@@ -33,6 +33,7 @@
             </div>
           </div>
         </li>
+        
         <UDivider />
         <ul class="divide-y divide-gray-200 dark:divide-gray-800">
           <!-- @click="navigate()" -->

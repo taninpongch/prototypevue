@@ -3,15 +3,59 @@
     <UDashboardNavbar title="DA Name">
     </UDashboardNavbar>
 
-    
+
     <UHorizontalNavigation :links="links" class="border-b border-gray-200 dark:border-gray-800" />
-    
+
     <!-- <TODO: content> -->
-      <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"
+    <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"
       :ui="{ base: '', padding: 'p-4 sm:p-4 lg:p-4', constrained: '' }">
       <p class="py-4 ">Project: Delivery</p>
       <!-- <p class="py-4 ">Add people/teams to Project </p> -->
       <UCard :ui="{ body: { base: 'space-y-4', padding: 'px-4 py-4 sm:p-4' } }">
+
+
+        <div class="">
+          <div>
+            <div class="flex justify-end items-end gap-4 pt-4">
+              <UButton class="flex items-center justify-end" label="Add people" color="green"
+                @click="dlgPeople = true" />
+              <UButton class="flex items-center justify-end" label="Add team" color="green" @click="isOpen = true" />
+            </div>
+            <UButtonGroup size="sm" orientation="horizontal">
+              <UInput />
+              <UButton icon="i-ion-md-search" color="gray" />
+            </UButtonGroup>
+          </div>
+        </div>
+
+        <!-- <li class="flex items-center justify-between gap-3 py-3 px-4 sm:px-6">
+          <div class="flex items-center gap-3 min-w-0">
+            <div class="text-sm min-w-0">
+              <p class="text-gray-900 dark:text-white font-medium truncate">3 Collabolators</p>
+            </div>
+          </div>
+        </li> -->
+
+        <li class="flex items-center justify-between gap-3 py-3 px-4 sm:px-6">
+          <div class="flex items-center gap-3 min-w-0">
+            <!-- <div class="">
+              <UCheckbox />
+            </div> -->
+            <div class="text-sm min-w-0">
+              <p class="text-gray-900 dark:text-white font-medium truncate">3 Collabolators</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="relative">
+              <UDropdown :items="fliter" :popper="{ placement: 'bottom-start' }">
+                <UButton label="Collabolators" color="white" trailing-icon="i-ion-chevron-down-sharp" />
+              </UDropdown>
+            </div>
+          </div>
+        </li>
+
+
+        <!-- 
         <div class="flex items-center">
           <div class="">
             <UButtonGroup size="sm" orientation="horizontal">
@@ -21,26 +65,12 @@
 
             <li class="flex items-center justify-between gap-3 py-3 px-4 sm:px-6">
               <div class="flex items-center gap-3 min-w-0">
-                <!-- <div class="">
-          <UCheckbox />
-        </div> -->
                 <div class="text-sm min-w-0">
                   <p class="text-gray-900 dark:text-white font-medium truncate">3 Collabolators</p>
                 </div>
               </div>
             </li>
-          </div>
-
-          <div class="flex justify-end items-end gap-4 pt-4" v-bind:class="{ 'justify-end': 'justify-between' }">
-            <div class="flex flex-wrap items-center gap-4">
-
-              <!-- <p @click="navigateCreateTeam()" class="text-blue-600">create team</p> -->
-              <UButton label="Add people" color="green" @click="dlgPeople = true" />
-              <UButton label="Add team" color="green" @click="isOpen = true" />
-            </div>
-          </div>
-        </div>
-
+          </div> -->
 
         <UModal v-model="isOpen">
           <UCard :ui="{ ring: '', divide: 'divide-y divide  -gray-100 dark:divide-gray-800' }">
@@ -327,6 +357,26 @@ const items = [
     click: () => {
       console.log('Remove')
       isOpenRemove.value = true
+    }
+  }]
+]
+
+const fliter = [
+  [{
+    label: 'All',
+    click: () => {
+      console.log('All');
+    }
+  },
+  {
+    label: 'teams',
+    click: () => {
+      console.log('teams')
+    }
+  }, {
+    label: 'people',
+    click: () => {
+      console.log('people')
     }
   }]
 ]

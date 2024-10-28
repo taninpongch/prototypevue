@@ -5,33 +5,39 @@
 
     
     <!-- <TODO: content> -->
+      <p class="py-4 "> Project > Delivery</p>
       <UHorizontalNavigation :links="links" class="border-b border-gray-200 dark:border-gray-800" />
       <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"
       :ui="{ base: '', padding: 'p-4 sm:p-4 lg:p-4', constrained: '' }">
-      <p class="py-4 ">Delivery</p>
       <UCard :ui="{ body: { base: 'space-y-4', padding: 'px-4 py-4 sm:p-4' } }">
-        <div>
+        <!-- <div> -->
           <UFormGroup label="Project detail">
           </UFormGroup>
+        <!-- </div> -->
 
-          <UVerticalNavigation :links="infos" class="w-full" :ui="{
-            base: '', inactive: 'group relative flex items-top gap-1.5 focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-1 focus-visible:before:ring-primary-500 dark:focus-visible:before:ring-primary-400 before:absolute before:inset-px before:rounded-md disabled:cursor-not-allowed disabled:opacity-75 px-2.5 py-1.5 w-full focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 rounded-md font-medium text-sm text-gray-500 dark:text-gray-400 dark:hover:text-white hover:before:bg-gray-50 dark:hover:before:bg-gray-800/50 hover:text-gray-500'
-            , wrapper: 'relative', label: 'truncate relative text-gray-900 dark:text-white flex-initial w-32 text-left'
-          }">
-            <template #badge="{ link }">
-              <div class="flex-1 flex justify-between relative truncate text-wrap text-left">
-                <p v-if="link.value == '-'" class="px-2 font-semibold">{{ link.value }}</p>
-                <p v-else>{{ link.value }}</p>
-              </div>
-              <!-- <div v-html="link.value"></div> -->
-            </template>
-          </UVerticalNavigation>
-        </div>
-
-        <UDivider />
-        <UFormGroup label="Collaborator and teams">
+          <UFormGroup label="Name">
+            <UInput placeholder="Delivery" :ui="{ base: 'disabled:bg-gray-200 dark:disabled:bg-black' }" />
           </UFormGroup>
 
+          <UFormGroup label="Description">
+            <UInput placeholder="ออกแบบ Project มาเพื่อใช้สำหรับขนส่งอาหารให้ถึงมือผู้บริโภค" :ui="{ base: 'disabled:bg-gray-200 dark:disabled:bg-black' }" />
+          </UFormGroup>
+          <!-- </UCard> -->
+
+          <div class="flex flex-wrap items-center gap-4" v-bind:class="{ 'justify-end': 'justify-between' }">
+            <div class="flex flex-wrap items-center gap-4">
+              <UButton label="บันทึก" color="green" />
+            </div>
+          </div>
+
+        <UDivider />
+        <UFormGroup label="API Usage">
+          </UFormGroup>
+
+          <p>XXXXXXXXX</p>
+          <p>XXXXXXXXX</p>
+          <p>XXXXXXXXX</p>
+<!-- 
           <li  class="flex items-center justify-between gap-3 py-3 px-4 sm:px-6">
             <div class="flex items-center gap-3 min-w-0">
               <UIcon class="w-10 h-10" name="i-ion-ios-people" />
@@ -55,7 +61,7 @@
                 </div>
               </div>
             </div>
-          </li>
+          </li> -->
 
         
 

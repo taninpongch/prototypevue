@@ -26,7 +26,7 @@ const period = ref<Period>('daily')
     <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"
       :ui="{ base: '', padding: 'p-4 sm:p-4 lg:p-4', constrained: '' }">
       <UCard :ui="{ body: { base: 'space-y-4', padding: 'px-4 py-4 sm:p-4' } }">
-        <p class="text-5xl">web นี้คืออะไร + tutorial เดี่ยวกับมาทำ</p>
+        <p class="text-5xl">web นี้คืออะไร + tutorial + mana update?</p>
       </UCard>
     </UContainer>
 

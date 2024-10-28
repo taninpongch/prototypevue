@@ -40,7 +40,7 @@ const items = computed(() => [
     </template> -->
 
     <template #default="{ open }">
-        <UButton block color="gray" variant="ghost" class="w-full" label="Buttree " size="xl"
+        <UButton block color="gray" variant="ghost" class="w-full" label="Teerachai " size="xl"
         :class="[open && 'bg-gray-50 dark:bg-gray-800']">
       </UButton>
     </template>
@@ -48,7 +48,7 @@ const items = computed(() => [
     <template #account>
       <div class="text-left">
         <p class="truncate font-medium text-gray-900 dark:text-white">
-          Buttree
+          Teerachai
         </p>
         <p class="truncate font-medium text-gray-900 dark:text-white">
           #1411577

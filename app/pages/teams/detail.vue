@@ -7,6 +7,7 @@
     <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"
       :ui="{ base: '', padding: 'p-4 sm:p-4 lg:p-4', constrained: '' }">
       <p class="py-4 ">The-S-Dev</p>
+      
       <UCard :ui="{ body: { base: 'space-y-4', padding: 'px-4 py-4 sm:p-4' } }">
 
         <div class="flex items-center justify-center">
@@ -43,7 +44,7 @@
                 <UCheckbox />
               </div> -->
               <div class="text-sm min-w-0">
-                <p class="text-gray-900 dark:text-white font-medium truncate">Buttree</p>
+                <p class="text-gray-900 dark:text-white font-medium truncate">Teerachai</p>
                 <p class="text-gray-400 dark:text-white font-medium truncate">Owner</p>
               </div>
             </div>

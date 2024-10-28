@@ -44,7 +44,7 @@
                   src="https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/antfu">
               </span>
               <div class="text-sm min-w-0">
-                <p class="text-gray-900 dark:text-white font-medium truncate">Buttree</p>
+                <p class="text-gray-900 dark:text-white font-medium truncate">Teerachai</p>
               </div>
             </div>
             <div class="flex items-center gap-3">
@@ -77,7 +77,7 @@
                   src="https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/antfu">
               </span>
               <div class="text-sm min-w-0">
-                <p class="text-gray-900 dark:text-white font-medium truncate">Tachapong</p>
+                <p class="text-gray-900 dark:text-white font-medium truncate">Buttree</p>
               </div>
             </div>
             <div class="flex items-center gap-3">

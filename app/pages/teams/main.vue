@@ -44,12 +44,41 @@
               </div> -->
               <div class="text-sm min-w-0">
                 <p class="text-gray-900 dark:text-white font-medium truncate">The-S-Dev</p>
-                <p class="text-gray-400 dark:text-white font-medium truncate">Description The-S-Dev-Team</p>
+                <p class="text-gray-400 dark:text-white font-medium truncate">ทีม Dev ผู้กล้าหาญ จับกระบี่กวัดแกว่งกวาดล้างผญามาญ</p>
               </div>
             </div>
             <div class="flex items-center gap-3">
               <div  class="relative">
                 <p class="text-gray-900 dark:text-white font-medium truncate">15 member</p>
+              </div>
+              <div data-headlessui-state="" class="relative inline-flex text-left rtl:text-right" position="bottom-end">
+                <div disabled="false" id="headlessui-menu-button-v-0-58-1" aria-haspopup="menu" aria-expanded="false"
+                  data-headlessui-state="" class="inline-flex w-full" role="button">
+                  <button type="button"
+                    class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 p-1.5 text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 inline-flex items-center">
+                    <span>
+                      <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
+                        <UButton color="white" trailing-icon="i-ion:ellipsis-horizontal-sharp" />
+                      </UDropdown>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li  class="flex items-center justify-between gap-3 py-3 px-4 sm:px-6">
+            <div @click="navigate()" class="flex items-center gap-3 min-w-0">
+              <!-- <div class="">
+                <UCheckbox />
+              </div> -->
+              <div class="text-sm min-w-0">
+                <p class="text-gray-900 dark:text-white font-medium truncate">The-S-Highclass</p>
+                <p class="text-gray-400 dark:text-white font-medium truncate">ทีม Dev ตัวใหญ่บึ้ม บึ้ม มีแสงออก teen</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div  class="relative">
+                <p class="text-gray-900 dark:text-white font-medium truncate">11 member</p>
               </div>
               <div data-headlessui-state="" class="relative inline-flex text-left rtl:text-right" position="bottom-end">
                 <div disabled="false" id="headlessui-menu-button-v-0-58-1" aria-haspopup="menu" aria-expanded="false"
@@ -72,8 +101,8 @@
                 <UCheckbox />
               </div>            -->
               <div class="text-sm min-w-0">
-                <p class="text-gray-900 dark:text-white font-medium truncate">The-S-Gp</p>
-                <p class="text-gray-400 dark:text-white font-medium truncate">Description The-S-Gp-Team</p>
+                <p class="text-gray-900 dark:text-white font-medium truncate">The-S-Firstclass</p>
+                <p class="text-gray-400 dark:text-white font-medium truncate">ทีม Dev ตัวเล็กตัวน้อย</p>
               </div>
             </div>
             <div class="flex items-center gap-3">

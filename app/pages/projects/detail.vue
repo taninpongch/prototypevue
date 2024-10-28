@@ -2,13 +2,12 @@
   <UDashboardPanel grow>
     <UDashboardNavbar title="DA Name">
     </UDashboardNavbar>
-
-    
     <!-- <TODO: content> -->
-      <p class="py-4 "> Project > Delivery</p>
       <UHorizontalNavigation :links="links" class="border-b border-gray-200 dark:border-gray-800" />
       <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"
       :ui="{ base: '', padding: 'p-4 sm:p-4 lg:p-4', constrained: '' }">
+      <p class="py-4 ">Project: Delivery</p>
+
       <UCard :ui="{ body: { base: 'space-y-4', padding: 'px-4 py-4 sm:p-4' } }">
         <!-- <div> -->
           <UFormGroup label="Project detail">
@@ -80,7 +79,7 @@ const links = [
     icon: 'i-ion-md-home',
     to: '/projects/detail'
   }, {
-    label: 'Member',
+    label: 'Collabolators',
     icon: 'i-ion-people-sharp',
     to: '/projects/addTeamToProject'
   }]

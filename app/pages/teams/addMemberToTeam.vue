@@ -62,8 +62,8 @@
 
       <div class="flex flex-wrap items-center gap-4 pt-4" v-bind:class="{ 'justify-end': 'justify-between' }">
         <div class="flex flex-wrap items-center gap-4">
-          <UButton label="Cancel" color="white" />
-          <UButton label="Add to repository" color="green" @click="isOpen = true" />
+          <UButton @click="$router.back()" label="Cancel" color="white" />
+          <UButton label="Add to team" color="green" @click="isOpen = true" />
 
           <UModal v-model="isOpen">
             <UCard :ui="{ ring: '', divide: 'divide-y divide  -gray-100 dark:divide-gray-800' }">
@@ -73,18 +73,13 @@
                   :closeButton="{ icon: 'i-heroicons-x-mark-20-solid', variant: 'soft', color: 'white' }" />
                 <UAlert title="Tatae999" icon="i-ion-ios-person-outline" variant="solid"
                   :closeButton="{ icon: 'i-heroicons-x-mark-20-solid', variant: 'soft', color: 'white' }" />
-                <p class="pt-4">Choose a role</p>
               </template>
-
-              <URadioGroup v-model="selected"
-                :options="[{ value: 'maintainer', label: 'maintainer', help: 'discription maintainer' }, { value: 'member', label: 'member', help: 'discription member' }]">
-              </URadioGroup>
 
               <template #footer>
                 <div class="flex flex-wrap items-center gap-4 pt-4" v-bind:class="{ 'justify-end': 'justify-between' }">
                   <div class="flex flex-wrap items-center gap-4">
                     <UButton label="Cancel" color="red" />
-                    <UButton label="Add to team" color="green" />
+                    <UButton label="Confirm" color="green" />
                   </div>
                 </div>
               </template>

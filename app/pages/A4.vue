@@ -16,13 +16,7 @@
           <UPricingGrid
             :ui="{ wrapper: 'text-left w-full md:grid-cols-1 lg:grid-cols-1 lg:grid lg:w-1/2 lg:h-1/2  mx-auto ' }"
             class="py-2">
-            <!-- <UPricingCard title="เงื่อนไขการใช้งาน">
-            <template #description class="">
-              <p class="font-bold text-black"> • คิวอาร์โค้ดนี้ใช้ได้ครั้งเดียว</p>
-              <p class="font-bold text-black"> • หลังจากสร้าง ต้องใช้ภายใน 30 นาทีเท่านั้น</p>
-            </template>
-</UPricingCard> -->
-            <UCard class="text-center">
+            <UCard class="text-center ">
               <p class="font-bold text-black text-xl">เงื่อนไขการใช้งาน</p>
               <p class="font-bold text-black"> • คิวอาร์โค้ดนี้ใช้ได้ครั้งเดียว</p>
               <p class="font-bold text-black"> • หลังจากสร้าง ต้องใช้ภายใน 30 นาทีเท่านั้น</p>

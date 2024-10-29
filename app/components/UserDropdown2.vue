@@ -17,6 +17,12 @@ const items = computed(() => [
       navigateTo('/organization/main')
     }
   }, {
+    label: 'Club',
+    icon: 'i-material-symbols-light:join-left',
+    click: () => {
+      navigateTo('/club/main')
+    }
+  }, {
     label: '',
     icon: '',
   }]
@@ -32,15 +38,15 @@ const items = computed(() => [
         <template #leading>
           <UAvatar src="https://avatars.githubusercontent.com/u/739984?v=4" size="2xs" />
         </template>
-        
-        <template #trailing>
+
+<template #trailing>
           <UIcon name="i-ion-home-outline" class="w-5 h-5 ml-auto" />
         </template>
-      </UButton>
-    </template> -->
+</UButton>
+</template> -->
 
     <template #default="{ open }">
-        <UButton block color="gray" variant="ghost" class="w-full" label="Teerachai " size="xl"
+      <UButton block color="gray" variant="ghost" class="w-full" label="Teerachai " size="xl"
         :class="[open && 'bg-gray-50 dark:bg-gray-800']">
       </UButton>
     </template>

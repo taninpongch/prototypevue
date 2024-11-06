@@ -36,7 +36,6 @@
             <p class="py-4 ">Clubs</p>
             <!-- <p class="py-4 ">Add people/teams to Project </p> -->
             <UCard :ui="{ body: { base: 'space-y-4', padding: 'px-4 py-4 sm:p-4' } }">
-
               <div>
                 <div class="flex justify-end items-end gap-4 pt-4">
                   <UButton class="flex items-center justify-end" label="Add club" color="green"
@@ -131,6 +130,8 @@
               </ul>
             </UCard>
           </UContainer>
+          <UDivider />
+          <UButton label="Go to Dev portal" color="green" />
 
           <UModal v-model="isOpenAddClub">
             <UCard :ui="{ ring: '', divide: 'divide-y divide  -gray-100 dark:divide-gray-800' }">

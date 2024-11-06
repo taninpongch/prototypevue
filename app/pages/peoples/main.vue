@@ -28,6 +28,8 @@
                 <UButton label="Role" color="white" trailing-icon="i-ion-chevron-down-sharp" />
               </UDropdown>
             </div>
+            <UButton :padded="false" color="gray" variant="link" icon="ion-information-circle-outline"
+              @click="isOpenRoleInfo = true" />
           </div>
         </li>
         <UDivider />
@@ -49,7 +51,7 @@
             </div>
             <div class="flex items-center gap-3">
               <div class="relative">
-                <p>owner</p> 
+                <p>owner</p>
               </div>
               <div data-headlessui-state="" class="relative inline-flex text-left rtl:text-right" position="bottom-end">
                 <div disabled="false" id="headlessui-menu-button-v-0-58-1" aria-haspopup="menu" aria-expanded="false"
@@ -82,7 +84,7 @@
             </div>
             <div class="flex items-center gap-3">
               <div class="relative">
-                <p>member</p> 
+                <p>member</p>
               </div>
               <div data-headlessui-state="" class="relative inline-flex text-left rtl:text-right" position="bottom-end">
                 <div disabled="false" id="headlessui-menu-button-v-0-58-1" aria-haspopup="menu" aria-expanded="false"
@@ -113,7 +115,7 @@
             </div>
             <div class="flex items-center gap-3">
               <div class="relative">
-                <p>member</p> 
+                <p>member</p>
               </div>
               <div data-headlessui-state="" class="relative inline-flex text-left rtl:text-right" position="bottom-end">
                 <div disabled id="headlessui-menu-button-v-0-58-1" aria-haspopup="menu" aria-expanded="false"
@@ -173,6 +175,26 @@
             </template>
           </UCard>
         </UModal>
+
+        <UModal v-model="isOpenRoleInfo">
+          <UCard :ui="{ ring: '', divide: 'divide-y divide  -gray-100 dark:divide-gray-800' }">
+            <template #header>
+              <p class="py-2 text-center">DevAccount roles</p>
+            </template>
+
+            <p class="py-2 font-semibold">Roles are used to grant access and permissions for teams and members.</p>
+            <UAlert description="มีสิทธิในการจัดการสมาชิกในกลุ่ม จัดการ Clubs และเข้าใช้งาน Dev portal" title="Owner" />
+            <UAlert description="มีสิทธิในการเข้าใช้งาน Dev portal" title="Member" />
+            <template #footer>
+              <div class="flex flex-wrap items-center gap-4 pt-4" v-bind:class="{ 'justify-end': 'justify-between' }">
+                <div class="flex flex-wrap items-center gap-4">
+                  <UButton label="Close" color="red" />
+                  <!-- <UButton label="confirm" color="green" /> -->
+                </div>
+              </div>
+            </template>
+          </UCard>
+        </UModal>
       </div>
     </UContainer>
 
@@ -182,6 +204,7 @@
 <script setup lang="ts">
 const isOpenRemove = ref(false)
 const isOpenChange = ref(false)
+const isOpenRoleInfo = ref(false)
 const selected = ref('sms')
 
 const fliter = [

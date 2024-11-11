@@ -29,7 +29,8 @@
                   src="https://placehold.co/600x600.png">
               </span>
               <div class="text-sm min-w-0">
-                <p class="text-gray-900 dark:text-white font-medium truncate">TheS</p>
+                <p class="text-gray-900 dark:text-white font-medium truncate">TheS (Owner)</p>
+                <p class="text-gray-400 dark:text-white font-medium truncate">คุณมีโปรเจคทั้งหมด 2 โปรเจค</p>
               </div>
             </div>
             <div class="flex items-center gap-3">
@@ -50,7 +51,8 @@
                   src="https://placehold.co/600x600.png">
               </span>
               <div class="text-sm min-w-0">
-                <p class="text-gray-900 dark:text-white font-medium truncate">Lugent</p>
+                <p class="text-gray-900 dark:text-white font-medium truncate">Lugent (Member)</p>
+                <p class="text-gray-400 dark:text-white font-medium truncate">คุณมีโปรเจคทั้งหมด 0 โปรเจค</p>
               </div>
             </div>
             <div class="flex items-center gap-3">

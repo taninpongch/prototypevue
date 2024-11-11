@@ -26,7 +26,7 @@
               <span
                 class="relative inline-flex items-center justify-center flex-shrink-0 rounded-full h-10 w-10 text-base">
                 <img class="rounded-full h-10 w-10 text-base"
-                  src="https://aithailand.co.th/uploads/texteditor/DM-01_1630551951.png">
+                  src="https://placehold.co/600x600.png">
               </span>
               <div class="text-sm min-w-0">
                 <p class="text-gray-900 dark:text-white font-medium truncate">TheS</p>
@@ -85,6 +85,10 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: 'dashboard'
+})
+
 const isOpenRemove = ref(false)
 const isOpenChange = ref(false)
 const selected = ref('sms')

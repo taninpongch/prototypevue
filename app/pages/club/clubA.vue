@@ -1,6 +1,6 @@
 <template>
   <UDashboardPanel grow>
-    <UDashboardNavbar title="Club">
+    <UDashboardNavbar title="Clubs">
     </UDashboardNavbar>
     <UDashboardPanelContent>
 
@@ -66,22 +66,30 @@
           </UCard>
         </UModal>
       </UContainer>
-    </UDashboardPanelContent>
 
+    </UDashboardPanelContent>
   </UDashboardPanel>
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: 'dashboard'
+});
+
 const isOpenAddClub = ref(false)
 
 const links = [
   [{
+    label: 'Clubs',
+    icon: 'i-ion-grid-outline',
+    to: '/club/main'
+  },{
     label: 'Overview',
-    icon: 'i-ion-md-home',
+    icon: 'i-ion-binoculars-outline',
     to: '/club/clubA'
   }, {
     label: 'Pricing',
-    icon: 'i-ion-people-sharp',
+    icon: 'i-material-symbols-light:paid-outline-rounded',
     to: '/club/pricing'
   }]
 ]

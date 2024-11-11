@@ -2,6 +2,10 @@
 import { sub } from 'date-fns'
 import type { Period, Range } from '~/types'
 
+definePageMeta({
+  layout: 'dashboard'
+})
+
 const { isNotificationsSlideoverOpen } = useDashboard()
 
 const items = [[{
@@ -23,13 +27,29 @@ const period = ref<Period>('daily')
     <UDashboardNavbar title="Dashboard">
     </UDashboardNavbar>
 
-    <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"
+    <!-- <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"
       :ui="{ base: '', padding: 'p-4 sm:p-4 lg:p-4', constrained: '' }">
       <UCard :ui="{ body: { base: 'space-y-4', padding: 'px-4 py-4 sm:p-4' } }">
         <p class="text-5xl">web นี้คืออะไร + tutorial + mana update?</p>
       </UCard>
-    </UContainer>
+    </UContainer> -->
+    <UCard :ui="{ body: { base: 'space-y-4', padding: 'px-4 py-4 sm:p-4' } }">
 
+      
+      <!-- <ULandingCard title="Color Palette"
+      description="Choose a primary and a gray color from your Tailwind CSS color palette. Components will be styled accordingly."
+      icon="i-heroicons-swatch" color="primary" /> -->
+      <ULandingCTA
+    title="Trusted and supported by our amazing community"
+    description="We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
+    card
+  />
+      <UDashboardCard title="TheS" description="You have 2 projects"
+        :links="[{ label: 'Learn more', color: 'gray', trailingIcon: 'i-heroicons-arrow-right-20-solid' }]" />
+      <UDashboardCard title="Lugent" description="You have 0 project"
+        :links="[{ label: 'Learn more', color: 'gray', trailingIcon: 'i-heroicons-arrow-right-20-solid' }]" />
+
+    </UCard>
   </UDashboardPanel>
 </template>
 

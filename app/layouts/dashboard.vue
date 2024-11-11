@@ -3,36 +3,6 @@ const route = useRoute()
 const appConfig = useAppConfig()
 const { isHelpSlideoverOpen } = useDashboard()
 
-const links = [{
-  id: 'Projects',
-  label: 'Projects',
-  icon: 'material-symbols-light:contract-edit-outline-rounded',
-  to: '/projects/main',
-  tooltip: {
-    text: 'Home',
-    shortcuts: ['G', 'H']
-  }
-}, {
-  id: 'Teams',
-  label: 'Teams',
-  icon: 'i-ion-ios-people-outline',
-  to: '/teams/main',
-  tooltip: {
-    text: 'Inbox',
-    shortcuts: ['G', 'I']
-  }
-}, {
-  id: 'People',
-  label: 'People',
-  icon: 'ion-person-outline',
-  to: '/peoples/main',
-  tooltip: {
-    text: 'Users',
-    shortcuts: ['G', 'U']
-  }
-}
-]
-
 const footerLinks = [{
   label: 'Sign out',
   icon: 'ion-log-out-outline',
@@ -80,7 +50,7 @@ const footerLinks = [{
           <!-- <UDashboardSearchButton /> -->
         </template>
 
-        <UDashboardSidebarLinks :links="links" />
+        <UDashboardSidebarLinks />
 
         <UDivider />
 

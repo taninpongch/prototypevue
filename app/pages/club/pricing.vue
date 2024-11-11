@@ -1,7 +1,8 @@
 <template>
   <UDashboardPanel grow>
-    <UDashboardNavbar title="Club">
+    <UDashboardNavbar title="Clubs">
     </UDashboardNavbar>
+    <UDashboardPanelContent>
 
     <UHorizontalNavigation :links="links" class="border-b border-gray-200 dark:border-gray-800" />
     <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"
@@ -15,8 +16,8 @@
         
         <UFormGroup label="Pricing" />
         <UDivider />
-        <p>1 EUR/USD per project.</p>
-        <p>100 EUR/USD per Mana Dev Account.</p>
+        <p>Pricing: $20 US / Project / Month</p>
+        <p>14-day free trial</p>
        
         <!-- 
           <li  class="flex items-center justify-between gap-3 py-3 px-4 sm:px-6">
@@ -50,19 +51,27 @@
 
     </UContainer>
 
+  </UDashboardPanelContent>
   </UDashboardPanel>
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: 'dashboard'
+})
 
 const links = [
   [{
+    label: 'Clubs',
+    icon: 'i-ion-grid-outline',
+    to: '/club/main'
+  },{
     label: 'Overview',
-    icon: 'i-ion-md-home',
+    icon: 'i-ion-binoculars-outline',
     to: '/club/clubA'
   }, {
     label: 'Pricing',
-    icon: 'i-ion-people-sharp',
+    icon: 'i-material-symbols-light:paid-outline-rounded',
     to: '/club/pricing'
   }]
 ]

@@ -1,7 +1,8 @@
 <template>
   <UDashboardPanel grow>
-    <UDashboardNavbar title="DA Name">
+    <UDashboardNavbar title="TheS">
     </UDashboardNavbar>
+    <UDashboardPanelContent>
 
 
     <UHorizontalNavigation :links="links" class="border-b border-gray-200 dark:border-gray-800" />
@@ -348,6 +349,7 @@
       </UCard>
 
     </UContainer>
+  </UDashboardPanelContent>
 
   </UDashboardPanel>
 </template>

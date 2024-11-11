@@ -1,56 +1,50 @@
 <template>
   <UDashboardPanel grow>
-    <!-- <UDashboardNavbar title="Mana Dev Account"> -->
-    <UHeader :links="links">
+    <UHeader to="/login/main" :links="links">
       <template #logo>
         <UAvatar size="sm" src="https://failfast.blob.core.windows.net/upload/Logo_manaForm.png" />
         Mana Dev Account
       </template>
-
       <template #right>
         <UButton label="Sign in" @click="navigatein()" />
         <UButton label="Sign up" color="green" @click="navigateup()" />
       </template>
     </UHeader>
 
-    <ULandingSection>
-      <ULandingHero id="overview" title="Supercharged GitHub experience"
+    <!-- <ULandingSection> -->
+      <ULandingHero id="overview" title="Superchanged Mana experience"
         description="Work in real-time with your team on open-source and private repositories, all in one place. Working on GitHub issues and notifications has never been that fun."
         orientation="vertical"
         :links="[{ label: 'Continue with GitHub', icon: 'i-simple-icons-github', color: 'gray', size: 'lg' }]">
       </ULandingHero>
-    </ULandingSection>
+    <!-- </ULandingSection> -->
 
-
-    <ULandingSection :ui="{ wrapper: 'p-0 sm:py-16' }" title="Download the app" description="Wherever you are">
-      <UPageGrid id="downloadManaApp3" class="scroll-mt-[calc(var(--header-height)+140px+128px+96px)]">
-        <ULandingCard v-for="(item, index) in downloadManaApp" :key="index" v-bind="item"
-          :ui="{ icon: { base: 'bg-red-600' } }" />
+    <ULandingSection id="downloadManaApp3" title="Download the app" description="Wherever you are">
+      <UPageGrid :ui="{ wrapper: 'grid grid-cols-4 sm:grid-cols-4 xl:grid-cols-2' }">
+        <UPageCard v-for="(module, index) in downloadManaApp" :key="index" v-bind="module" target="_blank">
+          <template #description>
+            <span class="line-clamp-1">{{ module.description }}</span>
+          </template>
+          <template #footer>
+            <UButton>Download</UButton>
+            <!-- <span class="line-clamp-1">{{ module.footer }}</span> -->
+          </template>
+        </UPageCard>
       </UPageGrid>
     </ULandingSection>
 
     <ULandingSection id="faq2" title="Frequently Asked Questions"
       description="If you can't find what you're looking for, email our support team and if you're lucky someone will get back to you">
-      <ULandingFAQ multiple :items="faqList"  />
+      <ULandingFAQ multiple :items="faqList" />
     </ULandingSection>
-
-    <!-- <ULandingSection id="faq2" title="Frequently Asked Questions" description="If you can't find what you're looking for, email our support team and if you're lucky someone will get back to you"
-      class="scroll-mt-[var(--header-height)]">
-      <ULandingFAQ multiple :items="faqList" :ui="{
-        button: {
-          label: 'font-semibold',
-          trailingIcon: {
-            base: 'w-6 h-6'
-          }
-        }
-      }" class="max-w-4xl mx-auto" />
-    </ULandingSection> -->
-
   </UDashboardPanel>
 </template>
 
 
 <script setup lang="ts">
+definePageMeta({
+  layout: 'login'
+})
 
 // const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
 const links = [{
@@ -70,11 +64,11 @@ const links = [{
 const downloadManaApp = [{
   title: 'On iOS',
   description: 'Works with iPhone, iPad, and Apple Watch',
-  icon: 'i-simple-icons-eslint'
+  icon: 'i-simple-icons-eslint',
 }, {
   title: 'On Android',
-  description: 'Stay connected across phones, tablets, and smart devices',
-  icon: 'i-simple-icons-tailwindcss'
+  description: 'Stay connected across phones, tablets, and smart devices Stay connected across phones, tablets, and smart devices',
+  icon: 'i-simple-icons-tailwindcss',
 }];
 
 const faqList = [{
@@ -98,9 +92,4 @@ const navigatein = () => {
 const navigateup = () => {
   navigateTo('signUp')
 }
-
-
-definePageMeta({
-  layout: 'login'
-})
 </script>

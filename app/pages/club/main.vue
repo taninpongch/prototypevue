@@ -1,6 +1,6 @@
 <template>
   <UDashboardPanel grow>
-    <UDashboardNavbar title="Club">
+    <UDashboardNavbar title="Clubs">
     </UDashboardNavbar>
     <UDashboardPanelContent>
       <!-- <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"
@@ -36,13 +36,22 @@
         </div>
       </li>
       <!-- </UCard> -->
-      <UPageGrid :ui="{ wrapper: 'grid grid-cols-4 sm:grid-cols-4 xl:grid-cols-4 gap-4' }">
+      <!-- <UPageGrid :ui="{ wrapper: 'grid grid-cols-4 sm:grid-cols-4 xl:grid-cols-4 gap-4' }">
         <UPageCard v-for="(module, index) in modules" :key="index" v-bind="module" target="_self"
           :ui="{ wrapper: 'grid grid-cols-4 sm:grid-cols-2 xl:grid-cols-3' }">
           <template #description>
-            <!-- <span class="line-clamp-2">{{ module.description }}</span> -->
-            <UAlert title="FREE"></UAlert>
-            <UAlert title="FREE TRAIL"></UAlert>
+            <span class="line-clamp-2">{{ module.description }}</span>
+          </template>
+        </UPageCard>
+      </UPageGrid> -->
+
+      <UPageGrid :ui="{ wrapper: 'grid grid-cols-4 sm:grid-cols-4 xl:grid-cols-4' }">
+        <UPageCard v-for="(module, index) in modules" :key="index" v-bind="module" target="_self">
+          <template #description>
+            <span class="line-clamp-1">{{ module.description }}</span>
+          </template>
+          <template #footer>
+            <span class="line-clamp-1">{{ module.footer }}</span>
           </template>
         </UPageCard>
       </UPageGrid>
@@ -51,55 +60,68 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: 'dashboard'
+})
+
 const modules = [{
   title: 'Service Management',
   description: 'ESLint module for Nuxt.',
   to: '/club/clubA',
-  icon: 'i-simple-icons-eslint'
+  icon: 'i-material-symbols-light:linked-services',
+  footer: 'FREE TRAIL'
 }, {
   title: 'Service Publishing',
   description: 'Add Tailwind CSS to your Nuxt application in seconds with PurgeCSS included for minimal CSS.',
   to: '/club/clubA',
-  icon: 'i-simple-icons-tailwindcss'
+  icon: 'i-material-symbols-light:family-history-rounded',
+  footer: 'FREE'
 }, {
   title: 'Business Management',
   description: 'Add Tailwind CSS to your Nuxt application in seconds with PurgeCSS included for minimal CSS.',
   to: '/club/clubA',
-  icon: 'i-simple-icons-tailwindcss'
+  icon: 'i-simple-icons-tailwindcss',
+  footer: 'FREE'
 }, {
   title: 'Membership Management',
   description: 'Collection of essential Vue Composition Utilities for Vue 2 and 3.',
   to: '/club/clubA',
   icon: 'i-simple-icons-nuxtdotjs',
+  footer: 'FREE'
 }, {
   title: 'Products and Orders',
   description: 'ESLint module for Nuxt.',
   to: '/club/clubA',
-  icon: 'i-simple-icons-eslint'
+  icon: 'i-material-symbols-light:float-portrait-2-rounded',
+  footer: 'FREE TRAIL'
 }
-, {
+  , {
   title: 'Promotions',
   description: 'ESLint module for Nuxt.',
   to: '/club/clubA',
-  icon: 'i-simple-icons-eslint'
+  icon: 'i-ion-megaphone',
+  footer: 'FREE TRAIL'
 }
-, {
+  , {
   title: 'Transaction Management',
   description: 'ESLint module for Nuxt.',
   to: '/club/clubA',
-  icon: 'i-simple-icons-eslint'
+  icon: 'i-ion-md-document',
+  footer: 'FREE'
 }
 , {
   title: 'Interaction and Messaging',
   description: 'ESLint module for Nuxt.',
   to: '/club/clubA',
-  icon: 'i-simple-icons-eslint'
+  icon: 'i-material-symbols-light:spatial-audio-rounded',
+  footer: 'FREE'
 }
-, {
+  , {
   title: 'Data Analytics',
   description: 'ESLint module for Nuxt.',
   to: '/club/clubA',
-  icon: 'i-simple-icons-eslint'
+  icon: 'i-material-symbols-light:energy-program-time-used-rounded',
+  footer: 'FREE TRAIL'
 }]
 
 const fliter = [

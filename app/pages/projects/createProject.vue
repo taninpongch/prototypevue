@@ -1,6 +1,6 @@
 <template>
   <UDashboardPanel grow>
-    <UDashboardNavbar title="Da Name">
+    <UDashboardNavbar title="TheS">
     </UDashboardNavbar>
 
     <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"

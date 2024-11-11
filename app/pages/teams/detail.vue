@@ -1,6 +1,6 @@
 <template>
   <UDashboardPanel grow>
-    <UDashboardNavbar title="The-S">
+    <UDashboardNavbar title="TheS">
     </UDashboardNavbar>
 
     <!-- <TODO: content> -->

@@ -5,13 +5,13 @@ const items = computed(() => [
     label: '',
     disabled: true
   }], [
-  //   {
-  //   label: 'Home',
-  //   icon: 'i-ion-home-outline',
-  //   click: () => {
-  //     navigateTo('')
-  //   }
-  // },
+    {
+    label: 'Home',
+    icon: 'i-ion-home-outline',
+    click: () => {
+      navigateTo('')
+    }
+  },
    {
     label: 'Dev account',
     icon: 'i-heroicons-building-storefront',

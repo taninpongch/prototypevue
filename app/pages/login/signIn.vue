@@ -34,7 +34,7 @@
 
 <script setup lang="ts">
 const navigate = () => {
-  navigateTo('/organization/main')
+  navigateTo('/')
 }
 
 const navigatein = () => {

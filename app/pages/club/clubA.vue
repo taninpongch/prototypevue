@@ -32,7 +32,7 @@
         <UModal v-model="isOpenAddClub">
           <UCard :ui="{ ring: '', divide: 'divide-y divide  -gray-100 dark:divide-gray-800' }">
             <template #header>
-              <p class="py-2">Select a Dev account</p>
+              <p class="py-2">Select a Dev organization</p>
             </template>
             <li class="flex items-center justify-between gap-3 py-3 px-4 sm:px-6">
               <div class="flex items-center gap-3 min-w-0">

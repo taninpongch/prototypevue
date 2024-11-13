@@ -1,17 +1,17 @@
 <template>
   <UDashboardPanel grow>
-    <UDashboardNavbar title="Dev Account">
+    <UDashboardNavbar title="Dev Organization">
     </UDashboardNavbar>
 
     <!-- <TODO: content> -->
     <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"
       :ui="{ base: '', padding: 'p-4 sm:p-4 lg:p-4', constrained: '' }">
-      <p class="py-4 ">Dev Account List</p>
+      <p class="py-4 ">Dev Organization List</p>
       <UCard :ui="{ body: { base: 'space-y-4', padding: 'px-4 py-4 sm:p-4' } }">
         <li class="flex items-center justify-between gap-3 py-3 px-4 sm:px-6">
           <div class="flex items-center gap-3 min-w-0">
             <div class="text-sm min-w-0">
-              <p class="text-gray-900 dark:text-white font-medium truncate">2 Dev Account</p>
+              <p class="text-gray-900 dark:text-white font-medium truncate">2 Dev Organization</p>
             </div>
           </div>
         </li>

@@ -10,7 +10,7 @@
       </UContainer> -->
 
 
-      <ULandingSection class="sm:py-6" title="Clubs for Mana dev account" />
+      <ULandingSection class="sm:py-6" title="Clubs for Dev organization" />
 
 
       <!-- <UCard :ui="{ body: { base: 'space-y-4', padding: 'px-4 py-4 sm:p-4' } }"> -->

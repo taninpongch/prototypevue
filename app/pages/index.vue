@@ -39,7 +39,7 @@ const period = ref<Period>('daily')
       <ULandingCTA title="Tutorial"
           description="We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
           card
-          :links="[{ label: 'Go to Dev account', color: 'green', size: 'md', variant: 'solid', click: mydlg }]" />
+          :links="[{ label: 'Go to Dev organization', color: 'green', size: 'md', variant: 'solid', click: mydlg }]" />
 
       
       <!-- <ULandingCard title="Color Palette"

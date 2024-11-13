@@ -3,7 +3,7 @@
     <UHeader to="/login/main">
       <template #logo>
         <UAvatar size="sm" src="https://failfast.blob.core.windows.net/upload/Logo_manaForm.png" />
-        Mana Dev Account
+        Dev organization
       </template>
       <template #right>
         <UButton label="Sign in" @click="navigatein()" />

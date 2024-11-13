@@ -179,7 +179,7 @@
         <UModal v-model="isOpenRoleInfo">
           <UCard :ui="{ ring: '', divide: 'divide-y divide  -gray-100 dark:divide-gray-800' }">
             <template #header>
-              <p class="py-2 text-center">DevAccount roles</p>
+              <p class="py-2 text-center">Dev organization roles</p>
             </template>
 
             <p class="py-2 font-semibold">Roles are used to grant access and permissions for teams and members.</p>

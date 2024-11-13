@@ -33,10 +33,18 @@
 
         <UFormGroup label="Work info">
         </UFormGroup>
-        <UFormGroup label="Role">
-          <USelect placeholder="ระบุตำแหน่งที่ต้องการเลือก" :options="bind_select" option-attribute="name"
-            :ui="{ base: 'disabled:bg-gray-200 dark:disabled:bg-black' }" />
-        </UFormGroup>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <div class="flex flex-wrap items-center gap-4">
+            <UFormGroup label="Role">
+            </UFormGroup>
+            <UButton :padded="false" color="gray" variant="link" icon="ion-information-circle-outline"
+              @click="isOpenRoleInfo = true" />
+          </div>
+        </div>
+
+        <USelect placeholder="ระบุตำแหน่งที่ต้องการเลือก" :options="bind_select" option-attribute="name"
+          :ui="{ base: 'disabled:bg-gray-200 dark:disabled:bg-black' }" />
       </UCard>
 
       <div class="flex flex-wrap items-center gap-4 pt-4" v-bind:class="{ 'justify-end': 'justify-between' }">
@@ -45,6 +53,26 @@
           <UButton label="ตกลง" color="green" @click="navigate()" />
         </div>
       </div>
+
+      <UModal v-model="isOpenRoleInfo">
+        <UCard :ui="{ ring: '', divide: 'divide-y divide  -gray-100 dark:divide-gray-800' }">
+          <template #header>
+            <p class="py-2 text-center">Dev organization roles</p>
+          </template>
+
+          <p class="py-2 font-semibold">Roles are used to grant access and permissions for teams and members.</p>
+          <UAlert description="มีสิทธิในการจัดการสมาชิกในกลุ่ม จัดการ Clubs และเข้าใช้งาน Dev portal" title="Owner" />
+          <UAlert description="มีสิทธิในการเข้าใช้งาน Dev portal" title="Member" />
+          <template #footer>
+            <div class="flex flex-wrap items-center gap-4 pt-4" v-bind:class="{ 'justify-end': 'justify-between' }">
+              <div class="flex flex-wrap items-center gap-4">
+                <UButton label="Close" color="red" />
+                <!-- <UButton label="confirm" color="green" /> -->
+              </div>
+            </div>
+          </template>
+        </UCard>
+      </UModal>
     </UContainer>
 
   </UDashboardPanel>
@@ -56,6 +84,7 @@ const navigate = () => {
   navigateTo('main')
 }
 
+const isOpenRoleInfo = ref(false)
 
 const bind_select = ref([{
   name: 'Member', value: 'Member'

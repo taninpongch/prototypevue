@@ -18,15 +18,6 @@ const items = computed(() => [
     click: () => {
       navigateTo('/organization/main')
     }
-  }, {
-    label: 'Club',
-    icon: 'i-material-symbols-light:join-left',
-    click: () => {
-      navigateTo('/club/main')
-    }
-  }, {
-    label: '',
-    icon: '',
   }]
 ])
 </script>

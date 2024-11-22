@@ -3,7 +3,17 @@ const route = useRoute()
 const appConfig = useAppConfig()
 const { isHelpSlideoverOpen } = useDashboard()
 
-const links = [{
+const links = [
+{
+  id: 'Clubs',
+  label: 'Clubs',
+  icon: 'i-ion-grid-outline',
+  to: '/club/main',
+  tooltip: {
+    text: 'Users',
+    shortcuts: ['G', 'U']
+  }
+},{
   id: 'Projects',
   label: 'Projects',
   icon: 'material-symbols-light:contract-edit-outline-rounded',

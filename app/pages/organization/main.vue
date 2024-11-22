@@ -87,10 +87,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  layout: 'dashboard'
-})
-
 const isOpenRemove = ref(false)
 const isOpenChange = ref(false)
 const selected = ref('sms')

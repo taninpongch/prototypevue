@@ -1,6 +1,6 @@
 <template>
   <UDashboardPanel grow>
-    <UDashboardNavbar title="Clubs">
+    <UDashboardNavbar title="TheS">
     </UDashboardNavbar>
     <UDashboardPanelContent>
       <!-- <UContainer class="'bg-white dark:bg-gray-900 space-y-4' : 'space-y-4'"
@@ -60,9 +60,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  layout: 'dashboard'
-})
 
 const modules = [{
   title: 'Service Management',

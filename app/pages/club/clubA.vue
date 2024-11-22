@@ -1,6 +1,6 @@
 <template>
   <UDashboardPanel grow>
-    <UDashboardNavbar title="Clubs">
+    <UDashboardNavbar title="TheS">
     </UDashboardNavbar>
     <UDashboardPanelContent>
 
@@ -10,7 +10,7 @@
         <ULandingCTA title="Service Management"
           description="We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
           card
-          :links="[{ label: 'Get Started', color: 'green', size: 'md', variant: 'solid', click: mydlg }, { label: '7 days free trial', variant: 'link', color: 'gray', size: 'md' }]" />
+          :links="[{ label: 'Get Started', color: 'green', size: 'md', variant: 'solid', click: addClub }, { label: '7 days free trial', variant: 'link', color: 'gray', size: 'md' }]" />
 
 
         <div class="space-y-4 px-4 py-4">
@@ -30,6 +30,23 @@
         </div>
 
         <UModal v-model="isOpenAddClub">
+        <UCard :ui="{ ring: '', divide: 'divide-y divide  -gray-100 dark:divide-gray-800' }">
+          <template #header>
+            <p class="py-2 text-center">Adding a club</p>
+          </template>
+          <p>The following club will be add to your organization :</p>
+          <UAlert title="Service Management" icon="i-material-symbols-light:linked-services" variant="solid" />
+          <template #footer>
+            <div class="flex flex-wrap items-center gap-4 pt-4" v-bind:class="{ 'justify-end': 'justify-between' }">
+              <div class="flex flex-wrap items-center gap-4">
+                <UButton label="Cancel" color="red" />
+                <UButton label="confirm" color="green" />
+              </div>
+            </div>
+          </template>
+        </UCard>
+      </UModal>
+        <!-- <UModal v-model="isOpenAddClub">
           <UCard :ui="{ ring: '', divide: 'divide-y divide  -gray-100 dark:divide-gray-800' }">
             <template #header>
               <p class="py-2">Select a Dev organization</p>
@@ -64,18 +81,13 @@
               </div>
             </template>
           </UCard>
-        </UModal>
+        </UModal> -->
       </UContainer>
-
     </UDashboardPanelContent>
   </UDashboardPanel>
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  layout: 'dashboard'
-});
-
 const isOpenAddClub = ref(false)
 
 const links = [
@@ -83,7 +95,7 @@ const links = [
     label: 'Clubs',
     icon: 'i-ion-grid-outline',
     to: '/club/main'
-  },{
+  }, {
     label: 'Overview',
     icon: 'i-ion-binoculars-outline',
     to: '/club/clubA'
@@ -99,5 +111,5 @@ const infos: any[] = [
   { label: "Description", value: "ออกแบบ Project มาเพื่อใช้สำหรับขนส่งอาหารให้ถึงมือผู้บริโภค" }
 ];
 
-const mydlg = () => { isOpenAddClub.value = true }
+const addClub = () => { isOpenAddClub.value = true }
 </script>

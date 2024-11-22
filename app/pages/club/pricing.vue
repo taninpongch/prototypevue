@@ -1,6 +1,6 @@
 <template>
   <UDashboardPanel grow>
-    <UDashboardNavbar title="Clubs">
+    <UDashboardNavbar title="TheS">
     </UDashboardNavbar>
     <UDashboardPanelContent>
 
@@ -56,10 +56,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  layout: 'dashboard'
-})
-
 const links = [
   [{
     label: 'Clubs',
